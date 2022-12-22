@@ -1,0 +1,16 @@
+.currency__container {
+  display: flex;
+  align-items: center;
+
+  .currency-wrapper {
+    min-width: 80px;
+    
+    > div {
+      border-radius: 9999px;
+    }
+
+    #currency-select {
+      padding: 6px 12px;
+    }
+  }
+}
