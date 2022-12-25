@@ -1,5 +1,5 @@
 import React from 'react';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { AiOutlineShoppingCart } from "react-icons/ai"
 import Logo from "../../assets/company-logo.jpg";
 import Currency from '../Currency/Currency';
 
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <div className="header__right">
         <Currency />
-        <ShoppingCartOutlinedIcon sx={{ fontSize: "1.5rem", marginLeft: "4px"}} />
+        <AiOutlineShoppingCart className="header__cart" />
       </div>
     </div>
   )
