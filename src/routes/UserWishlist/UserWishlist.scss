@@ -110,16 +110,30 @@
 
     .text {
       margin-top: 1.3rem;
-      margin-left: calc((100vw - 3rem * 2 - 250px * 3 - 1.5rem * 2) / 2);
+      margin-left: calc((100vw - 3rem * 2 - 250px * 4 - 1.5rem * 3) / 2);
       margin-bottom: 1rem;
       display: flex;
     }
 
     .userWishlist__wishlist-items {
       display: grid;
-      grid-template-columns: repeat(3, 250px);
+      grid-template-columns: repeat(4, 250px);
       grid-gap: 1.5rem;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .userWishlist__container {
+    .userWishlist__wishlist {
+      .text {
+        margin-left: calc((100vw - 3rem * 2 - 250px * 3 - 1.5rem * 2 ) / 2);
+      }
+
+      .userWishlist__wishlist-items {
+        grid-template-columns: repeat(3, 250px);
+      }
     }
   }
 }
