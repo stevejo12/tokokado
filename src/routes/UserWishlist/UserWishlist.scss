@@ -1,7 +1,6 @@
 .userWishlist__container {
   overflow-x: hidden;
   overflow-y: initial;
-  height: 200vh;
 
   .userWishlist__background {
     height: 14rem;
@@ -74,14 +73,15 @@
   }
 
   .userWishlist__wishlist {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+
     .userWishlist__listOptions {
       display: flex;
       list-style-type: none;
       justify-content: center;
-
-      > li:not(:last-child) {
-        
-      }
+      padding: 0.625rem 0;
 
       .userWishlist__listOptions-option {
         padding: 0.25rem 1rem 0;
@@ -91,6 +91,48 @@
         span {
           margin-left: 0.25rem;
         }
+      }
+    }
+
+    .userWishlist__wishlist-text {
+      display: flex;
+      flex-direction: column;
+      padding: 0.625rem 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+  
+      .userWishlist__subTitle {
+        font-size: 0.9rem;
+        padding: 0.375rem 0.625rem;
+        font-style: italic;
+      }
+    }
+
+    .text {
+      margin-top: 1.3rem;
+      margin-left: calc((100vw - 3rem * 2 - 250px * 3 - 1.5rem * 2) / 2);
+      margin-bottom: 1rem;
+      display: flex;
+    }
+
+    .userWishlist__wishlist-items {
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      grid-gap: 1.5rem;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .userWishlist__container {
+    .userWishlist__wishlist {
+      .text {
+        margin-left: calc((100vw - 3rem * 2 - 250px * 2 - 1.5rem ) / 2);
+      }
+
+      .userWishlist__wishlist-items {
+        grid-template-columns: repeat(2, 250px);
       }
     }
   }
@@ -104,6 +146,28 @@
 
       .userWishlist__socials {
         margin-top: 0.5rem;
+      }
+    }
+
+    .userWishlist__wishlist {
+      padding: 0 1rem;
+
+      .text {
+        margin-left: calc((100vw - 1rem * 2 - 250px * 2 - 1.5rem) / 2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .userWishlist__container {
+    .userWishlist__wishlist {
+      .text {
+        margin-left: calc((100vw - 1rem * 2 - 250px) / 2);
+      }
+
+      .userWishlist__wishlist-items {
+        grid-template-columns: repeat(1, 250px);
       }
     }
   }

@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { 
   BsInstagram, 
   BsTwitter, 
   BsTwitch, 
   BsShareFill, 
-  BsGift
+  BsGift,
+  BsPeopleFill
 } from "react-icons/bs"
+import WishlistCard from '../../components/WishlistCard/WishlistCard';
 
 import "./UserWishlist.scss";
 
+interface Data {
+  id: number;
+  thumbnail: string;
+  price: number;
+  title: string;
+}
+
 const UserWishlist = () => {
+  const [products, setProducts] = useState<Data[]>([]);
+
+  useEffect(() => {
+    //https://dummyjson.com/docs/products
+    fetch("https://dummyjson.com/products")
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data?.products)
+      });
+  }, [])
+  
+
   return (
     <div className="userWishlist__container">
       <div className="userWishlist__background">
@@ -62,14 +83,28 @@ const UserWishlist = () => {
             <span>Wishlist</span>
           </li>
           <li className="userWishlist__listOptions-option">
-            <BsInstagram />
-            <span>My Insta</span>
-          </li>
-          <li className="userWishlist__listOptions-option">
-            <BsTwitter />
-            <span>My Twitter</span>
+            <BsPeopleFill />
+            <span>Gifters</span>
           </li>
         </ul>
+        <div className="userWishlist__wishlist-text">
+          <span className="userWishlist__subTitle">
+            "Thanks for taking the time to check out my wishlist! These are things I feel might enhance my future adventures...stay tuned :-D" <strong>- Name</strong>
+          </span>
+        </div>
+       
+        <span className="text">All Gifts</span>
+        <div className="userWishlist__wishlist-items">
+          {products.map(product => (
+            <WishlistCard
+              key={product.id}
+              id={product.id} 
+              thumbnail={product.thumbnail}
+              price={product.price}
+              title={product.title}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
