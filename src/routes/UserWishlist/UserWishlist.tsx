@@ -6,16 +6,25 @@ import {
   BsShareFill, 
   BsGift,
   BsPeopleFill
-} from "react-icons/bs"
+} from "react-icons/bs";
+import JSONData from "../../data/WishlistPage.json";
 import WishlistCard from '../../components/WishlistCard/WishlistCard';
 
 import "./UserWishlist.scss";
 
+interface Currency {
+  IDR: number;
+  USD: number;
+  CAD: number;
+  SGD: number;
+}
+
 interface Data {
   id: number;
-  thumbnail: string;
-  price: number;
+  image: string;
+  price: Currency;
   title: string;
+  websiteBy: string;
 }
 
 const UserWishlist = () => {
@@ -23,11 +32,13 @@ const UserWishlist = () => {
 
   useEffect(() => {
     //https://dummyjson.com/docs/products
-    fetch("https://dummyjson.com/products")
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data?.products)
-      });
+    // fetch("https://dummyjson.com/products")
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     setProducts(data?.products)
+    const productsList = JSONData.wishlist.products;
+    setProducts(productsList);
+    //   });
   }, [])
   
 
@@ -59,6 +70,7 @@ const UserWishlist = () => {
           </div>
         </div>
         <ul className="userWishlist__socials">
+          {/* TODO Update Socials with Link (List? Blank = Not Shown) */}
           <li className="userWishlist__socials-icon">
             <BsTwitch />
             <span>My Twitch Channel</span>
@@ -95,12 +107,14 @@ const UserWishlist = () => {
        
         <span className="text">All Gifts</span>
         <div className="userWishlist__wishlist-items">
+          {/* TODO: Pagination Show 10 at a time? remove  */}
+          {/* https://mui.com/material-ui/react-pagination/ */}
           {products.map(product => (
             <WishlistCard
               key={product.id}
               id={product.id} 
-              thumbnail={product.thumbnail}
-              price={product.price}
+              thumbnail={product.image}
+              price={product.price.IDR}
               title={product.title}
             />
           ))}

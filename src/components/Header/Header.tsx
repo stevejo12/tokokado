@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import Logo from "../../assets/company-logo.jpg";
-import Currency from '../Currency/Currency';
+import CurrencyMenu from '../CurrencyMenu/CurrencyMenu';
 
 import "./Header.scss";
 
@@ -13,7 +13,7 @@ const Header = () => {
         <p className="header__left-name">KADO</p>
       </div>
       <div className="header__right">
-        <Currency />
+        <CurrencyMenu />
         <AiOutlineShoppingCart className="header__cart" />
       </div>
     </div>

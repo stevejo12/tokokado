@@ -32,7 +32,7 @@ const WishlistCard = ({ thumbnail, title, price }: IProps) => {
           by amazon.com
         </Typography>
         <Typography>
-          ${price}
+          IDR {price}
         </Typography>
       </CardContent>
       <CardActions>

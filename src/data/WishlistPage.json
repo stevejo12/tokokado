@@ -1,0 +1,39 @@
+{
+  "user": {
+    "username": "jecostar",
+    "name": "Jeco",
+    "socials": {
+      "twitch": "",
+      "instagram": "",
+      "twitter": ""
+    }
+  },
+  "wishlist": {
+    "products": [
+      {
+        "id":1,
+        "title": "iphone 9",
+        "websiteBy": "tokopedia.com",
+        "price": {
+          "IDR": 7000000,
+          "USD": 450.50,
+          "CAD": 611.30,
+          "SGD": 603.93
+        },
+        "image":"https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+      },
+      {
+        "id": 2,
+        "title": "iPhone X 256GB second Like New - Silver, 256 gb",
+        "websiteBy": "tokopedia.com",
+        "price": {
+          "IDR": 5000000,
+          "USD": 321.78,
+          "CAD": 436.19,
+          "SGD": 432.61
+        },
+        "image":"https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      }
+    ]
+  }
+}

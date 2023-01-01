@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { FormControl, MenuItem, Select } from '@mui/material'
+import { Currency, useCurrency } from '../../context/CurrencyContext';
 
-import "./Currency.scss";
+import "./CurrencyMenu.scss";
 
-const Currency = () => {
-  const [currency, setCurrency] = useState("USD");
+const CurrencyMenu = () => {
+  const { currency, setCurrency } = useCurrency();
 
   return (
     <div className="currency__container">
@@ -12,7 +13,7 @@ const Currency = () => {
         <Select
           id="currency-select"
           value={currency}
-          onChange={e => setCurrency(e.target.value)}
+          onChange={e => setCurrency(e.target.value as Currency)}
         >
           <MenuItem value="IDR">IDR</MenuItem>
           <MenuItem value="USD">USD</MenuItem>
@@ -25,4 +26,4 @@ const Currency = () => {
   )
 }
 
-export default Currency
+export default CurrencyMenu
