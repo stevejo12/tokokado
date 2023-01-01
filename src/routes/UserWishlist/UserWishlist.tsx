@@ -7,22 +7,16 @@ import {
   BsGift,
   BsPeopleFill
 } from "react-icons/bs";
+import { IPrice } from '../../models/price';
 import JSONData from "../../data/WishlistPage.json";
 import WishlistCard from '../../components/WishlistCard/WishlistCard';
 
 import "./UserWishlist.scss";
 
-interface Currency {
-  IDR: number;
-  USD: number;
-  CAD: number;
-  SGD: number;
-}
-
 interface Data {
   id: number;
   image: string;
-  price: Currency;
+  price: IPrice;
   title: string;
   websiteBy: string;
 }
@@ -114,7 +108,7 @@ const UserWishlist = () => {
               key={product.id}
               id={product.id} 
               thumbnail={product.image}
-              price={product.price.IDR}
+              price={product.price}
               title={product.title}
             />
           ))}

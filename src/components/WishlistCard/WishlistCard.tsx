@@ -4,18 +4,21 @@ import CardActions from "@mui/material/CardActions";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { useCurrency } from '../../context/CurrencyContext';
+import { IPrice } from '../../models/price';
 
 import "./WishlistCard.scss";
 
 interface IProps {
   id: number;
   thumbnail: string;
-  price: number;
+  price: IPrice;
   title: string;
-  // key: any;
 }
 
 const WishlistCard = ({ thumbnail, title, price }: IProps) => {
+  const { currency } = useCurrency();
+
   return (
     <Card className="wishlistCard__container">
       <div className="wishlistCard__image-container">
@@ -32,7 +35,7 @@ const WishlistCard = ({ thumbnail, title, price }: IProps) => {
           by amazon.com
         </Typography>
         <Typography>
-          IDR {price}
+          {currency} {price[currency]}
         </Typography>
       </CardContent>
       <CardActions>
