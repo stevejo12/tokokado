@@ -14,9 +14,10 @@ interface IProps {
   thumbnail: string;
   price: IPrice;
   title: string;
+  websiteBy: string;
 }
 
-const WishlistCard = ({ thumbnail, title, price }: IProps) => {
+const WishlistCard = ({ thumbnail, title, price, websiteBy }: IProps) => {
   const { currency } = useCurrency();
 
   return (
@@ -27,18 +28,18 @@ const WishlistCard = ({ thumbnail, title, price }: IProps) => {
           image={thumbnail}
         />
       </div>
-      <CardContent>
-        <Typography>
+      <CardContent className="wishlistCard__description">
+        <Typography className="wishlistCard__description-title">
           {title}
         </Typography>
-        <Typography>
-          by amazon.com
+        <Typography className="wishlistCard__description-subTitle">
+          by {websiteBy}
         </Typography>
-        <Typography>
+        <Typography className="wishlistCard__description-price">
           {currency} {price[currency]}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className="wishlistCard__actions">
         <button className="wishlistCard__button">Add to Cart</button>
       </CardActions>
     </Card>

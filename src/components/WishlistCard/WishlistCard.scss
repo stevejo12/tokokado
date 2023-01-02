@@ -4,19 +4,38 @@
   .wishlistCard__image-container {
     width: 250px;
     height: 250px;
+
+    .wishlistCard__image {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+    }
   }
 
-  .wishlistCard__image {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
+  .wishlistCard__description {
+    color: var(--primary-color);
+
+    .wishlistCard__description-subTitle,
+    .wishlistCard__description-price {
+      margin-top: var(--kado-space-1);
+    }
+
+    .wishlistCard__description-subTitle {
+      color: var(--secondary-color);
+    }
   }
 
-  .wishlistCard__button {
-    width: 100%;
-    padding: 0.3rem 0.6rem;
-    background-color: #FFD814;
-    border-color: #FCD200;
-    border-radius: 0.5rem;
+  .wishlistCard__actions {
+    color: var(--primary-color);
+    
+    .wishlistCard__button {
+      width: 100%;
+      padding: var(--kado-space-1-half) var(--kado-space-3);
+      background-color: var(--button-primary-background-color);
+      border-color: var(--button-primary-color);
+      border-radius: var(--border-radius-half);
+      color: inherit;
+    }
   }
+
 }

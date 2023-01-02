@@ -110,6 +110,7 @@ const UserWishlist = () => {
               thumbnail={product.image}
               price={product.price}
               title={product.title}
+              websiteBy={product.websiteBy}
             />
           ))}
         </div>

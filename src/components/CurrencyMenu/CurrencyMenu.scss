@@ -6,11 +6,11 @@
     min-width: 80px;
     
     > div {
-      border-radius: 9999px;
+      border-radius: var(--border-radius-full);
     }
 
     #currency-select {
-      padding: 6px 12px;
+      padding: var(--kado-space-1-half) var(--kado-space-3);
     }
   }
 }
