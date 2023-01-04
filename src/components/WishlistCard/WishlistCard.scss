@@ -15,6 +15,13 @@
   .wishlistCard__description {
     color: var(--primary-color);
 
+    .wishlistCard__description-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+    }
+
     .wishlistCard__description-subTitle,
     .wishlistCard__description-price {
       margin-top: var(--kado-space-1);

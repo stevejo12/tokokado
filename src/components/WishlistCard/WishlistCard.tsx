@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { useCurrency } from '../../context/CurrencyContext';
 import { IPrice } from '../../models/price';
+import Tooltip from '../Tooltip/Tooltip';
 
 import "./WishlistCard.scss";
 
@@ -29,9 +30,11 @@ const WishlistCard = ({ thumbnail, title, price, websiteBy }: IProps) => {
         />
       </div>
       <CardContent className="wishlistCard__description">
-        <Typography className="wishlistCard__description-title">
-          {title}
-        </Typography>
+        <Tooltip text={title}>
+          <Typography className="wishlistCard__description-title">
+            {title}
+          </Typography>
+        </Tooltip>
         <Typography className="wishlistCard__description-subTitle">
           by {websiteBy}
         </Typography>
