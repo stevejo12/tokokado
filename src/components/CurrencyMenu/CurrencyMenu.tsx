@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-import { FormControl, MenuItem, Select } from '@mui/material'
+import React from 'react';
+import { FormControl, MenuItem, Select } from '@mui/material';
 import { Currency, useCurrency } from '../../context/CurrencyContext';
 
 import "./CurrencyMenu.scss";
@@ -11,6 +11,9 @@ const CurrencyMenu = () => {
     <div className="currency__container">
       <FormControl className="currency-wrapper">
         <Select
+          MenuProps={{
+            disableScrollLock: true,
+          }}
           id="currency-select"
           value={currency}
           onChange={e => setCurrency(e.target.value as Currency)}

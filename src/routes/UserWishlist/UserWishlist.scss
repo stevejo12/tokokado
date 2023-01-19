@@ -48,27 +48,6 @@
         }
       }
     }
-
-    .userWishlist__socials {
-      display: flex;
-      flex-wrap: wrap;
-      
-      .userWishlist__socials-icon {
-        display: inline-flex;
-        align-items: center;
-        padding: var(--kado-space-1-half) var(--kado-space-3);
-        margin: var(--kado-space-1);
-        border: var(--kado-border-1px) var(--border-color);
-        border-radius: var(--border-radius-full);
-        overflow-wrap: break-word;
-
-        span {
-          display: inline-flex;
-          font-size: var(--kado-fontSizes-sm);
-          margin-left: var(--kado-space-1);
-        }
-      }
-    }
   }
 
   .userWishlist__wishlist {
@@ -107,12 +86,17 @@
       }
     }
 
-    .text {
+    .userWishlist__wishlistTitle {
       margin-top: var(--kado-space-5);
       margin-left: calc((100vw - 3rem * 2 - 250px * 4 - 1.5rem * 3) / 2);
       margin-bottom: var(--kado-space-4);
       display: flex;
+
+      .userWishlist__wishlistTitle-text {
+        font-size: var(--kado-fontSizes-xl);
+      }
     }
+
 
     .userWishlist__wishlist-items {
       display: grid;

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { CurrencyContext, Currency } from "./context/CurrencyContext"
 import Header from './components/Header/Header';
-// import Register from './routes/Register/Register';
+
+// Routes
+import Register from './routes/Register/Register';
 import UserWishlist from './routes/UserWishlist/UserWishlist';
+import Home from './routes/Home/Home';
 
 import './App.css';
 
@@ -10,10 +14,16 @@ function App() {
   const [currency, setCurrency] = useState(Currency.IDR);
 
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency}}>
+    <CurrencyContext.Provider value={{ currency, setCurrency }}>
       <div className="app">
-        <Header />
-        <UserWishlist />
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route 
+            path="/u/:username/wishlist" 
+            element={[<Header />, <UserWishlist />]}
+          />
+          <Route path="/" element={[<Header />, <Home />]} />
+        </Routes>
       </div>
     </CurrencyContext.Provider>
   );

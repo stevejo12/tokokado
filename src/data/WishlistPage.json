@@ -2,13 +2,18 @@
   "user": {
     "username": "jecostar",
     "name": "Jeco",
+    "profilePicture": "https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+    "isOwner": true,
     "socials": {
-      "twitch": "",
-      "instagram": "",
-      "twitter": ""
+      "tiktok": "",
+      "youtube": "",
+      "twitch": "https://www.twitch/tv/jecostar",
+      "instagram": "https://www.instagram.com/josteve4",
+      "twitter": "https://www.twitter.com/jecostar"
     }
   },
   "wishlist": {
+    "notes": "Thanks for taking the time to check out my wishlist! These are things I feel might enhance my future adventures...stay tuned :-D",
     "products": [
       {
         "id":1,
