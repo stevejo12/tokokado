@@ -1,29 +1,37 @@
 .register__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   overflow: hidden;
+  align-items: center;
 }
 
-.register__image, .register__form {
-  height: 100vh;
-  width: 50vw;
-}
+.register__companyLogo {
+  display: flex;
+  margin-bottom: var(--kado-space-5);
 
-.register__image {
-  img {
-    height: 100%;
-    width: 100%;
+  > img {
+    height: 5rem;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .register__container {
-    flex-direction: row;
+.register__form {
+  width: 100vw;
+  max-width: min(100%, 350px);
+  display: flex;
+  flex-direction: column;
+  padding: var(--kado-space-6);
 
-    .register__image img {
-      width: 100vw;
-      height: 50%;
-    }
+  .register__form-title {
+    font-size: var(--kado-fontSizes-3xl);
   }
-  
+}
+
+.register__form-container {
+  .register__form-fieldContainer {
+    margin: var(--kado-space-2) 0;
+  }
+
+  .register__form-button {
+    margin-top: var(--kado-space-4);
+  }
 }
