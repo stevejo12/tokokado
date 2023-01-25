@@ -1,0 +1,10 @@
+.home__wrapper {
+  display: flex;
+  margin: 65px auto 0;
+  max-width: 60rem;
+
+  .home__image {
+    width: 100%;
+    max-height: 500px;
+  }
+}

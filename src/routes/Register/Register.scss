@@ -29,6 +29,10 @@
 .register__form-container {
   .register__form-fieldContainer {
     margin: var(--kado-space-2) 0;
+
+    input {
+      padding: var(--kado-space-2) var(--kado-space-1);
+    }
   }
 
   .register__form-button {

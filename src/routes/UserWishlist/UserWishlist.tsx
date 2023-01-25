@@ -49,6 +49,7 @@ const UserWishlist = () => {
     <div className="userWishlist__container">
       <div className="userWishlist__background">
         <img 
+          className="userWishlist__background-picture"
           src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80" 
           alt="user-background"
         />
@@ -56,8 +57,9 @@ const UserWishlist = () => {
       <div className="userWishlist__about">
         <div className="userWishlist__profile">
           {/* Profile Picture */}
-          <div className="userWishlist__profile-picture">
+          <div className="userWishlist__profilePicture">
             <img 
+              className="userWishlist__profilePicture-img"
               src={user?.profilePicture}
               alt="user-profilePicture" 
             />
