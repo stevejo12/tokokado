@@ -13,6 +13,7 @@
   --border-radius-half: 0.5rem;
 
   --white: #ffffff;
+  --error-color: rgba(255,0,0,0.6);
 
   --button-primary-background-color: #FFD814;
   --button-primary-color: #FCD200;
@@ -75,8 +76,11 @@ code {
     monospace;
 }
 
-/* img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-} */
+.error {
+  color: var(--error-color);
+}
+
+.max-container {
+  max-width: 1800px;
+  margin-inline: auto;
+}

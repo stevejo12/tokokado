@@ -96,7 +96,7 @@
 
     .userWishlist__wishlistTitle {
       margin-top: var(--kado-space-5);
-      margin-left: calc((100vw - 3rem * 2 - 250px * 4 - 1.5rem * 3) / 2);
+      margin-left: calc((100% - 250px * 4 - 1.5rem * 3) / 2);
       margin-bottom: var(--kado-space-4);
       display: flex;
 
@@ -118,8 +118,8 @@
 @media screen and (max-width: 1200px) {
   .userWishlist__container {
     .userWishlist__wishlist {
-      .text {
-        margin-left: calc((100vw - 3rem * 2 - 250px * 3 - 1.5rem * 2 ) / 2);
+      .userWishlist__wishlistTitle {
+        margin-left: calc((100% - 250px * 3 - 1.5rem * 2 ) / 2);
       }
 
       .userWishlist__wishlist-items {
@@ -133,7 +133,7 @@
   .userWishlist__container {
     .userWishlist__wishlist {
       .userWishlist__wishlistTitle {
-        margin-left: calc((100vw - 3rem * 2 - 250px * 2 - 1.5rem ) / 2);
+        margin-left: calc((100% - 250px * 2 - 1.5rem ) / 2);
       }
 
       .userWishlist__wishlist-items {
@@ -158,7 +158,7 @@
       padding: 0 var(--kado-space-4);
 
       .userWishlist__wishlistTitle {
-        margin-left: calc((100vw - 1rem * 2 - 250px * 2 - 1.5rem) / 2);
+        margin-left: calc((100% - 250px * 2 - 1.5rem) / 2);
       }
     }
   }
@@ -168,7 +168,7 @@
   .userWishlist__container {
     .userWishlist__wishlist {
       .userWishlist__wishlistTitle {
-        margin-left: calc((100vw - 1rem * 2 - 250px) / 2);
+        margin-left: calc((100% - 1rem * 2 - 250px) / 2);
       }
 
       .userWishlist__wishlist-items {

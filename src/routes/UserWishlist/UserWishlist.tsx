@@ -54,7 +54,7 @@ const UserWishlist = () => {
           alt="user-background"
         />
       </div>
-      <div className="userWishlist__about">
+      <div className="userWishlist__about max-container">
         <div className="userWishlist__profile">
           {/* Profile Picture */}
           <div className="userWishlist__profilePicture">
@@ -76,7 +76,7 @@ const UserWishlist = () => {
         </div>
         <UserSocials socials={userSocials} />
       </div>
-      <div className="userWishlist__wishlist">
+      <div className="userWishlist__wishlist max-container">
         <ul className="userWishlist__listOptions">
           <li className="userWishlist__listOptions-option">
             <BsGift />

@@ -33,6 +33,10 @@
     input {
       padding: var(--kado-space-2) var(--kado-space-1);
     }
+
+    .register-errorText {
+      margin-top: var(--kado-space-1);
+    }
   }
 
   .register__form-button {
