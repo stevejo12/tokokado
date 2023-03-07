@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 
 // Routes
 import Register from './routes/Register/Register';
+import Login from './routes/Login/Login';
 import UserWishlist from './routes/UserWishlist/UserWishlist';
 import Home from './routes/Home/Home';
 
@@ -18,6 +19,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route 
             path="/u/:username/wishlist" 
             element={[<Header />, <UserWishlist />]}

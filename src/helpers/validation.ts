@@ -1,4 +1,4 @@
-import { IRegisterForm } from "../models/user";
+import { IForm, IRegisterForm } from "../models/user";
 
 const validateRegisterForm = (registerForm: IRegisterForm) => {
   // FORM VAlIDITY ON FRONTEND
@@ -18,4 +18,17 @@ const validateRegisterForm = (registerForm: IRegisterForm) => {
   return listEmptyKeys;
 }
 
-export { validateRegisterForm };
+const validateLoginForm = (loginForm: IForm) => {
+  const formKeys = Object.keys(loginForm);
+
+  const listEmptyKeys: string[] = formKeys.filter(key => {
+    const value = loginForm[key as keyof IForm];
+
+    // return boolean if value is not ""
+    return !!!value;
+  })
+
+  return listEmptyKeys;
+}
+
+export { validateRegisterForm, validateLoginForm };

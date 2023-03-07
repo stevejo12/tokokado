@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Button, FormControl, FormLabel, OutlinedInput } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Logo from "../../assets/company-logo.jpg";
+import { baseURL } from '../../data/constants';
 import { validateRegisterForm } from '../../helpers/validation';
 import { IRegisterForm, IRegisterFormValid } from '../../models/user';
 
 import "./Register.scss";
-import axios from 'axios';
-import { baseURL } from '../../data/constants';
-import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -25,11 +25,8 @@ const Register = () => {
 
   const handleSubmitRegister = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("submitted");
 
     const isThereEmptyField = validateRegisterForm(registerForm);
-
-    console.log("isthereemptyfield", isThereEmptyField);
 
     if (isThereEmptyField.length === 0) {
       // TODO
@@ -42,7 +39,6 @@ const Register = () => {
           alert("Error while trying to add user: " + err.response?.data?.data?.message);
         })
     } else {
-      console.log("list empty field", isThereEmptyField)
       const defaultData: IRegisterFormValid = isFormValid;
       // TODO
       // FIGURE OUT TO SHOW ERROR MESSAGE
@@ -56,8 +52,6 @@ const Register = () => {
         ...defaultData
       })
     }
-
-    console.log('value validation: ', isThereEmptyField);
   }
 
   const handleDataChange = (
