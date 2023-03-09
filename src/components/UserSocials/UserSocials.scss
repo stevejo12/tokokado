@@ -1,0 +1,20 @@
+.userWishlist__socials {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .userWishlist__socials-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--kado-space-1-half) var(--kado-space-3);
+    margin: var(--kado-space-1);
+    border: var(--kado-border-1px) var(--border-color);
+    border-radius: var(--border-radius-full);
+    overflow-wrap: break-word;
+
+    span {
+      display: inline-flex;
+      font-size: var(--kado-fontSizes-sm);
+      margin-left: var(--kado-space-1);
+    }
+  }
+}

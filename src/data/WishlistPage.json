@@ -2,13 +2,18 @@
   "user": {
     "username": "jecostar",
     "name": "Jeco",
+    "profilePicture": "https://images.unsplash.com/photo-1604537466158-719b1972feb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
+    "isOwner": true,
     "socials": {
-      "twitch": "",
-      "instagram": "",
-      "twitter": ""
+      "tiktok": "",
+      "youtube": "",
+      "twitch": "https://www.twitch/tv/jecostar",
+      "instagram": "https://www.instagram.com/josteve4",
+      "twitter": "https://www.twitter.com/jecostar"
     }
   },
   "wishlist": {
+    "notes": "Thanks for taking the time to check out my wishlist! These are things I feel might enhance my future adventures...stay tuned :-D",
     "products": [
       {
         "id":1,
@@ -20,7 +25,7 @@
           "CAD": 611.30,
           "SGD": 603.93
         },
-        "image":"https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+        "image":"https://images.pexels.com/photos/8947493/pexels-photo-8947493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         "id": 2,
@@ -32,7 +37,43 @@
           "CAD": 436.19,
           "SGD": 432.61
         },
-        "image":"https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+        "image":"https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id": 3,
+        "title": "iPhone X 256GB second Like New - Silver, 256 gb",
+        "websiteBy": "tokopedia.com",
+        "price": {
+          "IDR": 5000000,
+          "USD": 321.78,
+          "CAD": 436.19,
+          "SGD": 432.61
+        },
+        "image":"https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id": 4,
+        "title": "iPhone X 256GB second Like New - Silver, 256 gb",
+        "websiteBy": "tokopedia.com",
+        "price": {
+          "IDR": 5000000,
+          "USD": 321.78,
+          "CAD": 436.19,
+          "SGD": 432.61
+        },
+        "image":"https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      },
+      {
+        "id": 5,
+        "title": "iPhone X 256GB second Like New - Silver, 256 gb",
+        "websiteBy": "tokopedia.com",
+        "price": {
+          "IDR": 5000000,
+          "USD": 321.78,
+          "CAD": 436.19,
+          "SGD": 432.61
+        },
+        "image":"https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     ]
   }

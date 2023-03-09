@@ -13,6 +13,7 @@
   --border-radius-half: 0.5rem;
 
   --white: #ffffff;
+  --error-color: rgba(255,0,0,0.6);
 
   --button-primary-background-color: #FFD814;
   --button-primary-color: #FCD200;
@@ -36,6 +37,7 @@
   --kado-space-2: 0.5rem;
   --kado-space-2-half: 0.625rem;
   --kado-space-3: 0.75rem;
+  --kado-space-3-half: 0.875rem;
   --kado-space-4: 1rem;
   --kado-space-5: 1.25rem;
   --kado-space-6: 1.5rem;
@@ -74,8 +76,11 @@ code {
     monospace;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.error {
+  color: var(--error-color);
+}
+
+.max-container {
+  max-width: 1800px;
+  margin-inline: auto;
 }

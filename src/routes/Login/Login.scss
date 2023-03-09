@@ -1,40 +1,40 @@
-.register__container {
+.login__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.register__companyLogo {
+.login__companyLogo {
   display: flex;
   margin-bottom: var(--kado-space-5);
 }
 
-.register__form {
+.login__form {
   width: 100vw;
   max-width: min(100%, 500px);
   display: flex;
   flex-direction: column;
   padding: var(--kado-space-6);
 
-  .register__form-title {
+  .login__form-title {
     font-size: var(--kado-fontSizes-3xl);
   }
 }
 
-.register__form-container {
-  .register__form-fieldContainer {
+.login__form-container {
+  .login__form-fieldContainer {
     margin: var(--kado-space-2) 0;
 
     input {
       padding: var(--kado-space-2) var(--kado-space-1);
     }
 
-    .register-errorText {
+    .login-errorText {
       margin-top: var(--kado-space-1);
     }
   }
 
-  .register__form-button {
+  .login__form-button {
     margin-top: var(--kado-space-4);
   }
 }
