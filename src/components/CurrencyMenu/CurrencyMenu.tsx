@@ -11,6 +11,21 @@ const CurrencyMenu = () => {
     <div className="currency__container">
       <FormControl className="currency-wrapper">
         <Select
+          sx={{
+            color: 'white',
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: 'white',
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'white',
+            },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'white',
+            },
+            '.MuiSvgIcon-root ': {
+              fill: 'white',
+            }
+          }}
           MenuProps={{
             disableScrollLock: true,
           }}
