@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, FormControl, FormLabel, OutlinedInput } from '@mui/material';
-import axios from 'axios';
+import axios from '../../middleware/axios';
 import Logo from "../../assets/company-logo.jpg";
 import { ILoginForm, ILoginFormValid } from '../../models/user';
 import { baseURL } from '../../data/constants';
@@ -30,6 +30,9 @@ const Login = () => {
       // TODO
       // continue to backend
       axios.post(`${baseURL}/user/getByLogin`, loginInfo)
+        .then(res => {
+          localStorage.setItem("KadoToken", res.data.data.token);
+        })
         .then(() => {
           navigate("/")
         })

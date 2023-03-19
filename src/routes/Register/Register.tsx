@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Button, FormControl, FormLabel, OutlinedInput } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
 import Logo from "../../assets/company-logo.jpg";
+import axios from '../../middleware/axios';
 import { baseURL } from '../../data/constants';
 import { validateRegisterForm } from '../../helpers/validation';
 import { IRegisterForm, IRegisterFormValid } from '../../models/user';

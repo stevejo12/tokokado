@@ -35,12 +35,12 @@ $header-background-color: #232f3e;
       cursor: pointer;
     }
 
-    a {
+    .header__options {
       text-decoration: none;
       color: inherit;
     }
 
-    a:hover {
+    .header__options:hover {
       padding: calc(var(--kado-space-1-half) - 1px) calc(var(--kado-space-2-half) - 1px);
       border: var(--kado-border-1px) var(--white);
     }
