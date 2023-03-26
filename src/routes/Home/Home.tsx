@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Carousel from '../../components/Carousel/Carousel';
+import CarouselData from "../../data/Carousel.json";
+import { CarouselItemType } from '../../types/Carousel';
 
 import "./Home.scss";
 
 const Home = () => {
+  const sampleData: CarouselItemType[] = JSON.parse(JSON.stringify(CarouselData.images));
+  
+
   return (
     <div className="home__wrapper">
+      <Carousel images={sampleData}/>
       <a href="/register">
         <img
           className="home__image"

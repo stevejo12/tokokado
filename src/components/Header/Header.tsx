@@ -5,6 +5,8 @@ import CurrencyMenu from '../CurrencyMenu/CurrencyMenu';
 
 import "./Header.scss";
 
+// TO DO
+// Responsive Design => Hamburger when small screen
 const Header = () => {
   const [loginToken, setloginToken] = useState("");
 

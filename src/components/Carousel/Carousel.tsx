@@ -1,35 +1,85 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 import { CarouselItemType } from '../../types/Carousel';
+
+import "./Carousel.scss";
 
 interface IProps {
   images: CarouselItemType[];
 }
 
-const CarouselItem = ({ imageSrc, imageAlt } : CarouselItemType) => {
+interface ICarouselItemExtra extends CarouselItemType {
+  percent : number
+}
+
+const CarouselItem = ({ imageSrc, imageAlt, percent } : ICarouselItemExtra) => {
   return (
-    <li className="carousel__item">
+    <div 
+      className="carousel__item" 
+      style={{ transform: `translateX(${percent}%)`}}>
       <img src={imageSrc} alt={imageAlt} className="carousel__img" />
-    </li>
+    </div>
   )
 }
 
-// https://dominicarrojado.com/posts/how-to-create-your-own-swiper-in-react-and-typescript-with-tests-part-1/
 const Carousel = ({ images }: IProps) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const numberOfSlides = 3;
+  const [transformPercentage, setTransformPercentage] = useState(0);
+
+  useEffect(() => {
+    var handle = window.setInterval(slideCarousel, 5000);
+  
+    return () => {
+      window.clearInterval(handle);
+    }
+  }, [])
+
+  const slideCarousel = () => {
+    setTransformPercentage(prevPercentage =>
+      (prevPercentage - 100) % (numberOfSlides * 100)
+    );
+  }
+
+  const changeSlide = (direction : string) => {
+    if (direction === "left") {
+      // - (numberOfSlides * 100) to make sure it slides to last slide when clicked
+      setTransformPercentage(prevPercentage =>
+        ((prevPercentage - (numberOfSlides * 100)) + 100) % (numberOfSlides * 100)
+      );
+    } else if (direction === "right") {
+      setTransformPercentage(prevPercentage =>
+        (prevPercentage - 100) % (numberOfSlides * 100)
+      );
+    }
+  }
 
   return (
     <div className="carousel__container">
-      <ul className="carousel__list">
+      <div className="carousel__arrow left" onClick={() => changeSlide("left")}>
+        <ArrowBackIosIcon fontSize="small" />
+      </div>
+      <div 
+        className="carousel__list" 
+      >
         {images.map((image, index) => {
           return (
             <CarouselItem 
-              key={index} 
+              key={index}
+              percent={transformPercentage}
               imageSrc={image.imageSrc} 
               imageAlt={image.imageAlt} 
             />
           )
         })}
-      </ul>
+      </div>
+      <div 
+        className="carousel__arrow right" 
+        onClick={() => changeSlide("right")}
+      >
+        <ArrowForwardIosIcon fontSize="small" />
+      </div>
     </div>
   )
 }
