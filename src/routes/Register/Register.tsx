@@ -30,8 +30,6 @@ const Register = () => {
     const isThereEmptyField = validateRegisterForm(registerForm);
 
     if (isThereEmptyField.length === 0) {
-      // TODO
-      // continue to backend
       axios.post(`${baseURL}/user/add`, registerForm)
         .then(() => {
           navigate("/")
@@ -41,9 +39,6 @@ const Register = () => {
         })
     } else {
       const defaultData: IRegisterFormValid = isFormValid;
-      // TODO
-      // FIGURE OUT TO SHOW ERROR MESSAGE
-      // error with error message probably?
       for (var i=0; i < isThereEmptyField.length; i++) {
         defaultData[isThereEmptyField[i] as keyof IRegisterFormValid] = true;
       }

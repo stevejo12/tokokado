@@ -45,8 +45,6 @@
     }
   }
 
-  // TODO
-  // Make Arrow Smaller when Screen Smaller
   .carousel__arrow {
     display: none;
     border-radius: var(--border-radius-full);
@@ -91,6 +89,19 @@
         height: auto;
         user-select: none;
         aspect-ratio: 4 / 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel__container {
+    .carousel__arrow {
+      width: 20px;
+      height: 20px;
+
+      .MuiSvgIcon-root {
+        font-size: 0.75rem;
       }
     }
   }
