@@ -29,18 +29,12 @@ const Carousel = ({ images }: IProps) => {
   const [transformPercentage, setTransformPercentage] = useState(0);
 
   useEffect(() => {
-    var handle = window.setInterval(slideCarousel, 5000);
+    var handle = window.setInterval(() => changeSlide("right"), 5000);
   
     return () => {
       window.clearInterval(handle);
     }
   }, [])
-
-  const slideCarousel = () => {
-    setTransformPercentage(prevPercentage =>
-      (prevPercentage - 100) % (numberOfSlides * 100)
-    );
-  }
 
   const changeSlide = (direction : string) => {
     if (direction === "left") {
