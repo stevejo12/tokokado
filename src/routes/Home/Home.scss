@@ -1,6 +1,8 @@
 .home__wrapper {
   display: flex;
   max-width: 60rem;
+  flex-direction: column;
+  margin: 0 auto;
 
   .home__image {
     width: 100%;

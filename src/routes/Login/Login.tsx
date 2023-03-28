@@ -27,8 +27,6 @@ const Login = () => {
     const isThereEmptyField = validateLoginForm(loginInfo);
 
     if (isThereEmptyField.length === 0) {
-      // TODO
-      // continue to backend
       axios.post(`${baseURL}/user/getByLogin`, loginInfo)
         .then(res => {
           localStorage.setItem("KadoToken", res.data.data.token);

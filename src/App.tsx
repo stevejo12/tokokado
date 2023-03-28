@@ -9,6 +9,8 @@ import Login from './routes/Login/Login';
 import UserWishlist from './routes/UserWishlist/UserWishlist';
 import Home from './routes/Home/Home';
 
+import "./App.scss";
+
 function App() {
   const [currency, setCurrency] = useState(Currency.IDR);
 
